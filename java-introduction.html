@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Java Concepts - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h3 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Core Java Concepts</h2>
+        <div class="content">
+            <h3>Introduction to Java</h3>
+            <p>Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let developers write once, run anywhere (WORA), meaning compiled Java code can run on all platforms that support Java without the need for recompilation.</p>
+
+            <h3>Variables and Data Types</h3>
+            <p>Java has various data types including primitive data types (e.g., int, char, float, boolean) and reference data types (e.g., arrays, objects). Variables are used to store data values, and they must be declared before use.</p>
+
+            <h3>Object-Oriented Programming (OOP)</h3>
+            <p>Java is an object-oriented language, which means that it uses classes and objects to model real-world entities. Key principles of OOP in Java include:</p>
+            <ul>
+                <li><b>Encapsulation:</b> Bundling of data and methods that operate on the data within one unit (class).</li>
+                <li><b>Inheritance:</b> Mechanism where one class acquires the properties (fields and methods) of another class.</li>
+                <li><b>Polymorphism:</b> Ability to present the same interface for different underlying data types.</li>
+                <li><b>Abstraction:</b> Hiding complex implementation details and showing only the necessary features of an object.</li>
+            </ul>
+
+            <h3>Collections Framework</h3>
+            <p>The Java Collections Framework provides a set of classes and interfaces that implement commonly reusable collection data structures. These include lists, sets, maps, queues, etc.</p>
+
+            <h3>Exception Handling</h3>
+            <p>Java uses exceptions to handle runtime errors, ensuring the normal flow of the application. The try-catch-finally blocks are used to handle exceptions. Common exceptions include NullPointerException, ArithmeticException, and ArrayIndexOutOfBoundsException.</p>
+
+            <h3>Multithreading</h3>
+            <p>Java provides built-in support for multithreading, allowing concurrent execution of two or more parts of a program. It can be implemented using the Thread class or Runnable interface.</p>
+
+            <h3>Streams and Lambda Expressions</h3>
+            <p>Introduced in Java 8, streams and lambda expressions simplify operations on collections. Streams allow functional-style operations on sequences of elements, while lambda expressions provide a clear and concise way to represent a single method interface.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

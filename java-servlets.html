@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servlets and JSP - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .note-card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .note-card h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .note-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .example {
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Servlets and JSP</h2>
+        <div class="content">
+            <div class="note-card">
+                <h3>Understanding Servlets</h3>
+                <p>A servlet is a Java class that handles HTTP requests and responses. It runs on a web server or application server and is used to create dynamic web content.</p>
+
+                <h3>Servlet Lifecycle</h3>
+                <p>Servlets follow a specific lifecycle managed by the servlet container:</p>
+                <ul>
+                    <li><strong>Loading:</strong> The servlet class is loaded into memory.</li>
+                    <li><strong>Instantiation:</strong> An instance of the servlet is created.</li>
+                    <li><strong>Initialization:</strong> The <code>init()</code> method is called.</li>
+                    <li><strong>Request Handling:</strong> The <code>service()</code> method is called for each request.</li>
+                    <li><strong>Destruction:</strong> The <code>destroy()</code> method is called before the servlet is removed from memory.</li>
+                </ul>
+
+                <h3>Creating a Simple Servlet</h3>
+                <div class="example">
+                    <strong>Example:</strong><br>
+                    <code>import java.io.*;<br>
+                    import javax.servlet.*;<br>
+                    import javax.servlet.http.*;<br>
+                    public class HelloWorldServlet extends HttpServlet {<br>
+                        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {<br>
+                            PrintWriter out = response.getWriter();<br>
+                            out.println("Hello, World!");<br>
+                        }<br>
+                    }</code>
+                </div>
+
+                <h3>Understanding JSP (JavaServer Pages)</h3>
+                <p>JSP is a technology that helps in creating dynamically generated web pages based on HTML, XML, or other document types. It allows embedding Java code directly into the HTML markup.</p>
+
+                <h3>JSP Lifecycle</h3>
+                <p>The lifecycle of a JSP page includes:</p>
+                <ul>
+                    <li><strong>Translation:</strong> The JSP is converted into a servlet by the server.</li>
+                    <li><strong>Compilation:</strong> The generated servlet is compiled.</li>
+                    <li><strong>Execution:</strong> The servlet is executed to handle requests.</li>
+                </ul>
+
+                <h3>Creating a Simple JSP Page</h3>
+                <div class="example">
+                    <strong>Example:</strong><br>
+                    <code>&lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;<br>
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html&gt;<br>
+                    &lt;head&gt;&lt;title&gt;Hello World&lt;/title&gt;&lt;/head&gt;<br>
+                    &lt;body&gt;<br>
+                    &lt;h1&gt;Hello, World!&lt;/h1&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;</code>
+                </div>
+
+                <h3>Benefits of Servlets and JSP</h3>
+                <ul>
+                    <li>Platform-independent and portable.</li>
+                    <li>Separation of business logic from presentation layer.</li>
+                    <li>Support for reusable components.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

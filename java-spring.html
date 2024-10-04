@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Framework - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .note-card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .note-card h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .note-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .example {
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Spring Framework</h2>
+        <div class="content">
+            <div class="note-card">
+                <h3>Introduction to Spring Framework</h3>
+                <p>The Spring Framework is a powerful framework for building Java applications. It provides comprehensive infrastructure support for developing Java applications and offers features like Dependency Injection (DI) and Aspect-Oriented Programming (AOP).</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li><strong>Dependency Injection:</strong> Promotes loose coupling through DI, allowing developers to manage application components easily.</li>
+                    <li><strong>Aspect-Oriented Programming:</strong> Allows separation of cross-cutting concerns (e.g., logging, security) from business logic.</li>
+                    <li><strong>Spring MVC:</strong> A web framework that follows the Model-View-Controller design pattern for building web applications.</li>
+                    <li><strong>Spring Boot:</strong> A project within Spring that simplifies the setup and development of new Spring applications.</li>
+                </ul>
+
+                <h3>Spring Framework Architecture</h3>
+                <p>The architecture of Spring Framework consists of several layers, including:</p>
+                <ul>
+                    <li><strong>Core Container:</strong> The core container provides the foundation for Spring, including the BeanFactory and ApplicationContext.</li>
+                    <li><strong>AOP Module:</strong> Provides aspect-oriented programming capabilities.</li>
+                    <li><strong>Data Access/Integration:</strong> Includes support for JDBC, ORM frameworks like Hibernate, and transaction management.</li>
+                    <li><strong>Web Module:</strong> Includes Spring MVC and web-related functionalities.</li>
+                </ul>
+
+                <h3>Creating a Simple Spring Application</h3>
+                <div class="example">
+                    <strong>Example:</strong><br>
+                    <code>import org.springframework.context.ApplicationContext;<br>
+                    import org.springframework.context.support.ClassPathXmlApplicationContext;<br>
+                    public class HelloWorldApp {<br>
+                        public static void main(String[] args) {<br>
+                            ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");<br>
+                            HelloWorld helloWorld = context.getBean("helloWorld", HelloWorld.class);<br>
+                            helloWorld.sayHello();<br>
+                        }<br>
+                    }</code>
+                </div>
+
+                <h3>Spring Boot</h3>
+                <p>Spring Boot simplifies the process of creating stand-alone, production-grade Spring applications. Key features include:</p>
+                <ul>
+                    <li>Auto-configuration: Automatically configures the application based on dependencies.</li>
+                    <li>Standalone: Spring Boot applications can be run as standalone Java applications.</li>
+                    <li>Embedded Server: Provides embedded Tomcat, Jetty, or Undertow servers to simplify deployment.</li>
+                </ul>
+
+                <h3>Benefits of Using Spring Framework</h3>
+                <ul>
+                    <li>Flexible: Provides a range of options for building applications.</li>
+                    <li>Community Support: A large and active community providing support and resources.</li>
+                    <li>Integration: Easily integrates with other frameworks and technologies.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multithreading - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h3 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content ul {
+            padding-left: 20px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Multithreading in Java</h2>
+        <div class="content">
+            <h3>What is Multithreading?</h3>
+            <p>Multithreading in Java is a process of executing multiple threads simultaneously. A thread is a lightweight subprocess and is the smallest unit of a process. Java multithreading allows the concurrent execution of two or more parts of a program to maximize the utilization of the CPU.</p>
+
+            <h3>Advantages of Multithreading</h3>
+            <ul>
+                <li><b>Increased responsiveness:</b> Applications can remain responsive to users even when performing lengthy tasks.</li>
+                <li><b>Efficient use of resources:</b> Threads can share resources like memory, resulting in more efficient use of system resources.</li>
+                <li><b>Faster execution:</b> By running multiple threads concurrently, tasks can complete faster, especially on multi-core processors.</li>
+                <li><b>Better system utilization:</b> Multithreading improves system performance by utilizing idle time of CPU cores.</li>
+            </ul>
+
+            <h3>Thread Lifecycle</h3>
+            <p>In Java, a thread can be in one of the following states:</p>
+            <ul>
+                <li><b>New:</b> When a thread is created, but not yet started.</li>
+                <li><b>Runnable:</b> After calling the `start()` method, the thread enters the `runnable` state, which means it's ready to run.</li>
+                <li><b>Running:</b> The thread is executing its task.</li>
+                <li><b>Blocked:</b> The thread is waiting for a monitor lock or another thread to release resources.</li>
+                <li><b>Waiting:</b> The thread is waiting for some condition to be met (e.g., waiting for another thread to finish execution).</li>
+                <li><b>Terminated:</b> Once the thread finishes executing, it moves to the terminated state.</li>
+            </ul>
+
+            <h3>Creating Threads in Java</h3>
+            <p>There are two main ways to create a thread in Java:</p>
+
+            <h4>1. Extending the `Thread` class</h4>
+            <pre><code>
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+    
+    public static void main(String[] args) {
+        MyThread t = new MyThread();
+        t.start();  // Start the thread
+    }
+}
+            </code></pre>
+
+            <h4>2. Implementing the `Runnable` interface</h4>
+            <pre><code>
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+    
+    public static void main(String[] args) {
+        MyRunnable myRunnable = new MyRunnable();
+        Thread t = new Thread(myRunnable);
+        t.start();  // Start the thread
+    }
+}
+            </code></pre>
+
+            <h3>Thread Synchronization</h3>
+            <p>When multiple threads are accessing shared resources concurrently, it's important to synchronize the threads to prevent inconsistent data. In Java, synchronization can be achieved by using the `synchronized` keyword.</p>
+
+            <pre><code>
+class Counter {
+    private int count = 0;
+
+    public synchronized void increment() {
+        count++;
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        Counter counter = new Counter();
+
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                counter.increment();
+            }
+        });
+
+        Thread t2 = new Thread(() -> {
+            for (int i = 0; i < 1000; i++) {
+                counter.increment();
+            }
+        });
+
+        t1.start();
+        t2.start();
+
+        t1.join();
+        t2.join();
+
+        System.out.println("Final count: " + counter.getCount());
+    }
+}
+            </code></pre>
+
+            <h3>Thread Communication</h3>
+            <p>In multithreaded programming, it's often necessary for threads to communicate with each other. Java provides `wait()`, `notify()`, and `notifyAll()` methods for inter-thread communication.</p>
+
+            <pre><code>
+class SharedResource {
+    private boolean available = false;
+
+    public synchronized void produce() throws InterruptedException {
+        while (available) {
+            wait();  // Wait until the resource is consumed
+        }
+        System.out.println("Produced");
+        available = true;
+        notify();
+    }
+
+    public synchronized void consume() throws InterruptedException {
+        while (!available) {
+            wait();  // Wait until the resource is produced
+        }
+        System.out.println("Consumed");
+        available = false;
+        notify();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SharedResource resource = new SharedResource();
+
+        Thread producer = new Thread(() -> {
+            try {
+                for (int i = 0; i < 5; i++) {
+                    resource.produce();
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+
+        Thread consumer = new Thread(() -> {
+            try {
+                for (int i = 0; i < 5; i++) {
+                    resource.consume();
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+
+        producer.start();
+        consumer.start();
+    }
+}
+            </code></pre>
+
+            <h3>Best Practices in Multithreading</h3>
+            <ul>
+                <li><b>Minimize synchronization:</b> Use synchronization only when absolutely necessary to avoid performance bottlenecks.</li>
+                <li><b>Avoid deadlock:</b> Carefully design your code to avoid situations where two threads are waiting on each other to release resources.</li>
+                <li><b>Use thread pools:</b> For tasks that need to be executed multiple times, use `ExecutorService` or thread pools to manage threads efficiently.</li>
+                <li><b>Handle thread interruptions:</b> Ensure that your threads handle `InterruptedException` gracefully to allow for proper thread termination.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

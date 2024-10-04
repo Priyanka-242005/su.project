@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h3 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content ul {
+            padding-left: 20px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Exception Handling in Java</h2>
+        <div class="content">
+            <h3>What is Exception Handling?</h3>
+            <p>Exception handling in Java is a mechanism that allows you to handle runtime errors, ensuring that the normal flow of the application is maintained. Java uses the `try`, `catch`, `throw`, `throws`, and `finally` keywords for this.</p>
+
+            <h3>Types of Exceptions</h3>
+            <ul>
+                <li><b>Checked Exceptions:</b> These are exceptions that are checked at compile-time. If a method can throw a checked exception, it must either handle the exception using `try-catch` or declare it using the `throws` keyword. Example: `IOException`, `SQLException`.</li>
+                <li><b>Unchecked Exceptions:</b> These exceptions are not checked at compile-time. They are usually caused by logical errors, and include runtime exceptions. Example: `NullPointerException`, `ArrayIndexOutOfBoundsException`.</li>
+                <li><b>Error:</b> Errors represent serious problems that a reasonable application should not try to catch, such as `OutOfMemoryError`.</li>
+            </ul>
+
+            <h3>Exception Handling Keywords</h3>
+            <ul>
+                <li><b>try:</b> Used to specify a block where exceptions can occur.</li>
+                <li><b>catch:</b> Handles the exception thrown by the `try` block.</li>
+                <li><b>finally:</b> A block that is executed after `try` and `catch`, regardless of whether an exception occurred or not. It is generally used to release resources like files, database connections, etc.</li>
+                <li><b>throw:</b> Used to explicitly throw an exception.</li>
+                <li><b>throws:</b> Used in method declaration to declare the exceptions that can be thrown by the method.</li>
+            </ul>
+
+            <h3>Basic Syntax of Exception Handling</h3>
+            <pre><code>
+public class Main {
+    public static void main(String[] args) {
+        try {
+            // Code that may throw an exception
+            int data = 50 / 0;
+        } catch (ArithmeticException e) {
+            // Handling the exception
+            System.out.println("Cannot divide by zero: " + e);
+        } finally {
+            System.out.println("This block always executes.");
+        }
+    }
+}
+            </code></pre>
+
+            <h3>Custom Exceptions</h3>
+            <p>You can also create your own exceptions in Java by extending the `Exception` class:</p>
+            <pre><code>
+class CustomException extends Exception {
+    public CustomException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            throw new CustomException("This is a custom exception.");
+        } catch (CustomException e) {
+            System.out.println("Caught custom exception: " + e.getMessage());
+        }
+    }
+}
+            </code></pre>
+
+            <h3>Commonly Used Exception Classes</h3>
+            <ul>
+                <li><b>ArithmeticException:</b> Thrown when an arithmetic operation, such as division by zero, is performed.</li>
+                <li><b>NullPointerException:</b> Thrown when trying to use `null` as an object.</li>
+                <li><b>ArrayIndexOutOfBoundsException:</b> Thrown when an array has been accessed with an illegal index.</li>
+                <li><b>ClassNotFoundException:</b> Thrown when an application tries to load a class through its name, but no definition of the class can be found.</li>
+                <li><b>IOException:</b> Thrown when there is an input-output operation failure, such as when trying to read from a file that doesn't exist.</li>
+            </ul>
+
+            <h3>Best Practices in Exception Handling</h3>
+            <ul>
+                <li><b>Avoid using exceptions for control flow:</b> Use exceptions only for exceptional situations and not for regular flow control in your program.</li>
+                <li><b>Always clean up resources in `finally`:</b> Whether or not an exception occurs, resources like database connections, files, or sockets should be closed in the `finally` block.</li>
+                <li><b>Use meaningful messages in custom exceptions:</b> Ensure that the exception message provides enough context for debugging.</li>
+                <li><b>Catch specific exceptions:</b> Avoid using generic exception classes like `Exception` or `Throwable`. Always catch specific exceptions to make your code more readable and maintainable.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

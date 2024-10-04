@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hibernate ORM - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .note-card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .note-card h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .note-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .example {
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Hibernate ORM</h2>
+        <div class="content">
+            <div class="note-card">
+                <h3>Introduction to Hibernate</h3>
+                <p>Hibernate is a popular Object-Relational Mapping (ORM) framework for Java. It simplifies database interactions by mapping Java objects to database tables.</p>
+
+                <h3>Key Features of Hibernate</h3>
+                <ul>
+                    <li><strong>Object-Relational Mapping:</strong> Automatically maps Java objects to database tables and vice versa.</li>
+                    <li><strong>HQL (Hibernate Query Language):</strong> A powerful query language similar to SQL, but operates on Java objects rather than database tables.</li>
+                    <li><strong>Cache Management:</strong> Supports both first-level (session) and second-level (session factory) caching.</li>
+                    <li><strong>Transaction Management:</strong> Provides built-in support for managing transactions.</li>
+                </ul>
+
+                <h3>Hibernate Architecture</h3>
+                <p>The architecture of Hibernate consists of several components, including:</p>
+                <ul>
+                    <li><strong>Configuration:</strong> Configures Hibernate with settings for connecting to the database and mapping classes.</li>
+                    <li><strong>Session Factory:</strong> Creates sessions for interacting with the database.</li>
+                    <li><strong>Session:</strong> Provides an interface for performing CRUD operations.</li>
+                    <li><strong>Transaction:</strong> Represents a single unit of work.</li>
+                </ul>
+
+                <h3>Basic CRUD Operations with Hibernate</h3>
+                <div class="example">
+                    <strong>Example:</strong><br>
+                    <code>Session session = sessionFactory.openSession();<br>
+                    Transaction transaction = session.beginTransaction();<br>
+                    MyEntity entity = new MyEntity();<br>
+                    entity.setName("Sample Name");<br>
+                    session.save(entity);<br>
+                    transaction.commit();<br>
+                    session.close();</code>
+                </div>
+
+                <h3>Mapping Annotations</h3>
+                <p>Hibernate provides various annotations for mapping Java classes to database tables:</p>
+                <ul>
+                    <li><strong>@Entity:</strong> Specifies that a class is an entity and is mapped to a database table.</li>
+                    <li><strong>@Table:</strong> Specifies the name of the database table to be used for mapping.</li>
+                    <li><strong>@Id:</strong> Specifies the primary key of the entity.</li>
+                    <li><strong>@GeneratedValue:</strong> Indicates that the primary key should be generated automatically.</li>
+                </ul>
+
+                <h3>Benefits of Using Hibernate</h3>
+                <ul>
+                    <li>Simplifies database interactions and reduces boilerplate code.</li>
+                    <li>Provides portability across different databases.</li>
+                    <li>Offers powerful features like caching, lazy loading, and batch processing.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .course-cards {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .course-card {
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+        }
+
+        .course-card h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .course-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .course-card button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .course-card button:hover {
+            background-color: #3e8e41;
+        }
+
+        .course-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+        <a href="resources.html">RESOURCES</a>
+    </nav>
+
+    
+    <section>
+        <h2>Summer Courses We Offer</h2>
+        <div class="course-cards">
+            <div class="course-card">
+                <img src="4-Python-01 (2).png" alt="Fullstack Python Course">
+                <h3>Summer Course: Fullstack Python</h3>
+                <p>Master Python from basics to full-stack web development.</p>
+                <p><button onclick="location.href='summercourse python.html'">Learn More - ₹12000/-</button></p>
+            </div>
+            <div class="course-card">
+                <img src="java-logo-1 (1).png" alt="Fullstack Java Course">
+                <h3>Summer Course: Fullstack Java</h3>
+                <p>Become proficient in Java programming and web technologies.</p>
+                <p><button onclick="location.href='summercourse java.html'">Learn More - ₹12000/-</button></p>
+            </div>
+            <div class="course-card">
+                <img src="c image.jpeg" alt="C & Data Structure Course">
+                <h3>Summer Course: C & Data Structure</h3>
+                <p>Gain solid knowledge in C programming and data structures.</p>
+                <p><button onclick="location.href='summercourse c.html'">Learn More - ₹10000/-</button></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures in Python - LTLT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .notes-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .note-card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .note-card h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .note-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <div class="dropdown">
+            <a href="courses.html">COURSES</a>
+            <div class="dropdown-content">
+                <a href="python.html">Python</a>
+                <a href="java.html">Java</a>
+                <a href="c.html">C</a>
+            </div>
+        </div>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+        <div class="dropdown">
+            <a href="resources.html">RESOURCES</a>
+            <div class="dropdown-content">
+                <a href="lakysha training learn technology.html">Lakysha Training Learn Technology</a>
+                <a href="c,adv c,icp,java,dsa,python.html">C,ADV C,ICP,JAVA,DSA,PYTHON BY JITU SIR</a>
+                <a href="java concept by jitu sir.html">Java Concept By JITU SIR</a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <h2>Data Structures in Python</h2>
+        <div class="notes-content">
+            <div class="note-card">
+                <h3>1. Lists</h3>
+                <p>Lists are ordered, mutable collections that can hold mixed data types.</p>
+                <pre>
+my_list = [1, 2, 3, 'apple', 'banana']
+my_list.append('orange')  # Adds 'orange' to the end
+print(my_list[0])  # Output: 1
+                </pre>
+            </div>
+            <div class="note-card">
+                <h3>2. Tuples</h3>
+                <p>Tuples are ordered, immutable collections. They can also hold mixed data types.</p>
+                <pre>
+my_tuple = (1, 2, 3, 'apple', 'banana')
+print(my_tuple[1])  # Output: 2
+                </pre>
+            </div>
+            <div class="note-card">
+                <h3>3. Sets</h3>
+                <p>Sets are unordered collections of unique elements. They are mutable.</p>
+                <pre>
+my_set = {1, 2, 3, 4, 5}
+my_set.add(6)  # Adds 6 to the set
+print(my_set)  # Output: {1, 2, 3, 4, 5, 6}
+                </pre>
+            </div>
+            <div class="note-card">
+                <h3>4. Dictionaries</h3>
+                <p>Dictionaries are unordered collections of key-value pairs. They are mutable.</p>
+                <pre>
+my_dict = {'name': 'Alice', 'age': 25}
+print(my_dict['name'])  # Output: Alice
+my_dict['age'] = 26  # Update age
+                </pre>
+            </div>
+            <div class="note-card">
+                <h3>5. List Comprehensions</h3>
+                <p>A concise way to create lists using a single line of code.</p>
+                <pre>
+squared = [x**2 for x in range(10)]
+print(squared)  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+                </pre>
+            </div>
+            <div class="note-card">
+                <h3>6. Using Tuples for Unpacking</h3>
+                <p>Tuples can be used to unpack values into multiple variables.</p>
+                <pre>
+point = (3, 5)
+x, y = point
+print(x, y)  # Output: 3 5
+                </pre>
+            </div>
+            <div class="note-card">
+                <h3>7. Nesting Data Structures</h3>
+                <p>Data structures can be nested inside one another.</p>
+                <pre>
+nested_list = [[1, 2], [3, 4], [5, 6]]
+print(nested_list[1][0])  # Output: 3
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Oriented Programming - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h3 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content ul {
+            padding-left: 20px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Object-Oriented Programming (OOP)</h2>
+        <div class="content">
+            <h3>What is Object-Oriented Programming?</h3>
+            <p>Object-Oriented Programming (OOP) is a programming paradigm that is based on the concept of "objects", which can contain data and code that manipulates that data. OOP allows for modular design and code reusability through concepts like inheritance and polymorphism.</p>
+
+            <h3>Key Concepts of OOP</h3>
+            <ul>
+                <li><b>Classes and Objects:</b> A class is a blueprint for creating objects (instances). An object is an instance of a class, containing properties (fields) and behaviors (methods).</li>
+                <li><b>Encapsulation:</b> Encapsulation is the concept of wrapping data (variables) and methods (functions) together as a single unit or class, and restricting access to some of the object's components. This is done through access modifiers like `private`, `protected`, and `public`.</li>
+                <li><b>Inheritance:</b> Inheritance allows a new class (subclass) to inherit properties and methods from an existing class (superclass), promoting code reuse and the creation of hierarchical relationships.</li>
+                <li><b>Polymorphism:</b> Polymorphism allows methods to perform different tasks based on the object that invokes them. It can be achieved through method overloading (compile-time polymorphism) or method overriding (runtime polymorphism).</li>
+                <li><b>Abstraction:</b> Abstraction involves hiding implementation details and showing only the necessary features. It can be achieved using abstract classes and interfaces, where the specific details of the implementation are left to the subclasses.</li>
+            </ul>
+
+            <h3>Class and Object Example</h3>
+            <p>Below is an example of a simple Java class and an object:</p>
+            <pre><code>
+class Car {
+    // Fields
+    String model;
+    String color;
+    
+    // Constructor
+    public Car(String model, String color) {
+        this.model = model;
+        this.color = color;
+    }
+
+    // Method
+    public void displayInfo() {
+        System.out.println("Model: " + model + ", Color: " + color);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an object
+        Car myCar = new Car("Toyota", "Red");
+        myCar.displayInfo();  // Output: Model: Toyota, Color: Red
+    }
+}
+            </code></pre>
+
+            <h3>Encapsulation Example</h3>
+            <p>Encapsulation is demonstrated when fields are declared as `private` and accessed using getter and setter methods:</p>
+            <pre><code>
+class Person {
+    // Private fields
+    private String name;
+    private int age;
+    
+    // Getter and Setter methods
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person person = new Person();
+        person.setName("Alice");
+        person.setAge(30);
+        
+        System.out.println("Name: " + person.getName());
+        System.out.println("Age: " + person.getAge());
+    }
+}
+            </code></pre>
+
+            <h3>Inheritance Example</h3>
+            <p>Inheritance allows a class to inherit methods and properties from another class:</p>
+            <pre><code>
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.makeSound();  // Output: Dog barks
+    }
+}
+            </code></pre>
+
+            <h3>Polymorphism Example</h3>
+            <p>Polymorphism allows an object to take many forms:</p>
+            <pre><code>
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        Animal myDog = new Dog();
+        
+        myAnimal.makeSound();  // Output: Animal makes a sound
+        myDog.makeSound();     // Output: Dog barks
+    }
+}
+            </code></pre>
+
+            <h3>Abstraction Example</h3>
+            <p>Abstraction using an abstract class:</p>
+            <pre><code>
+abstract class Shape {
+    // Abstract method
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    // Implementation of abstract method
+    void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape shape = new Circle();
+        shape.draw();  // Output: Drawing a circle
+    }
+}
+            </code></pre>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

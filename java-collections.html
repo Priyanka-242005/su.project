@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections Framework - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h3 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content ul {
+            padding-left: 20px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Collections Framework</h2>
+        <div class="content">
+            <h3>What is the Collections Framework?</h3>
+            <p>The Java Collections Framework provides a set of classes and interfaces for storing and manipulating groups of data as a single unit. Collections in Java allow for dynamic storage, retrieval, manipulation, and access to data in an efficient manner.</p>
+
+            <h3>Key Interfaces of the Collections Framework</h3>
+            <ul>
+                <li><b>Collection:</b> The root interface of the Java Collections Framework. It provides basic methods like `add()`, `remove()`, `size()`, and `clear()` for working with collections of objects.</li>
+                <li><b>List:</b> An ordered collection that allows duplicate elements. Commonly used implementations include `ArrayList`, `LinkedList`, and `Vector`.</li>
+                <li><b>Set:</b> A collection that does not allow duplicates. Common implementations include `HashSet`, `LinkedHashSet`, and `TreeSet`.</li>
+                <li><b>Queue:</b> A collection used for holding elements prior to processing, often in a first-in-first-out (FIFO) manner. Implementations include `LinkedList` and `PriorityQueue`.</li>
+                <li><b>Map:</b> A collection that maps keys to values. No duplicate keys are allowed. Common implementations include `HashMap`, `TreeMap`, and `LinkedHashMap`.</li>
+            </ul>
+
+            <h3>Common Classes in the Collections Framework</h3>
+            <ul>
+                <li><b>ArrayList:</b> A resizable array implementation of the `List` interface. It provides fast random access but slower insertion/removal in the middle of the list compared to `LinkedList`.</li>
+                <li><b>LinkedList:</b> A doubly-linked list implementation of both `List` and `Deque` interfaces. It is ideal for frequent insertions and deletions.</li>
+                <li><b>HashSet:</b> Implements the `Set` interface and is backed by a hash table. It doesn't guarantee any order of elements.</li>
+                <li><b>HashMap:</b> Implements the `Map` interface and stores key-value pairs. It provides constant-time performance for the basic operations (get and put).</li>
+                <li><b>TreeMap:</b> Implements the `Map` interface and provides a sorted map based on the natural ordering of its keys or a custom comparator.</li>
+            </ul>
+
+            <h3>Example: Using ArrayList</h3>
+            <p>Below is an example of using `ArrayList` to store and retrieve elements:</p>
+            <pre><code>
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an ArrayList
+        ArrayList<String> fruits = new ArrayList<>();
+
+        // Add elements
+        fruits.add("Apple");
+        fruits.add("Banana");
+        fruits.add("Orange");
+
+        // Get an element
+        System.out.println(fruits.get(1)); // Output: Banana
+
+        // Loop through the list
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+
+        // Remove an element
+        fruits.remove("Apple");
+    }
+}
+            </code></pre>
+
+            <h3>Example: Using HashMap</h3>
+            <p>The following example demonstrates how to use `HashMap` to store key-value pairs:</p>
+            <pre><code>
+import java.util.HashMap;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a HashMap
+        HashMap<String, Integer> ageMap = new HashMap<>();
+
+        // Add key-value pairs
+        ageMap.put("Alice", 30);
+        ageMap.put("Bob", 25);
+        ageMap.put("Charlie", 35);
+
+        // Get a value by key
+        System.out.println("Alice's age: " + ageMap.get("Alice"));
+
+        // Iterate over keys and values
+        for (String name : ageMap.keySet()) {
+            System.out.println(name + " is " + ageMap.get(name) + " years old.");
+        }
+    }
+}
+            </code></pre>
+
+            <h3>Methods of the Collection Interface</h3>
+            <p>Some common methods provided by the `Collection` interface:</p>
+            <ul>
+                <li><b>add(E element):</b> Adds the specified element to the collection.</li>
+                <li><b>remove(Object element):</b> Removes the specified element from the collection, if it exists.</li>
+                <li><b>size():</b> Returns the number of elements in the collection.</li>
+                <li><b>clear():</b> Removes all elements from the collection.</li>
+                <li><b>contains(Object element):</b> Returns `true` if the collection contains the specified element.</li>
+                <li><b>iterator():</b> Returns an iterator over the elements in the collection.</li>
+            </ul>
+
+            <h3>Difference Between List, Set, and Map</h3>
+            <p>Here’s a quick comparison of `List`, `Set`, and `Map`:</p>
+            <ul>
+                <li><b>List:</b> Ordered collection, allows duplicates (e.g., `ArrayList`, `LinkedList`).</li>
+                <li><b>Set:</b> Unordered collection, no duplicates allowed (e.g., `HashSet`, `TreeSet`).</li>
+                <li><b>Map:</b> Key-value pairs, unique keys (e.g., `HashMap`, `TreeMap`).</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

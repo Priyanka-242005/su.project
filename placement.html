@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .placement-section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .placement-heading {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .placement-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .placement-table th, .placement-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .placement-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .placement-table td {
+            color: #333;
+        }
+
+        .placement-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .placement-info {
+            margin-top: 40px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .company-logo {
+            width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Placement Records</h2>
+        <div class="placement-section">
+            <h3 class="placement-heading">Recent Placements</h3>
+            <table class="placement-table">
+                <tr>
+                    <th>Student Name</th>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Salary (INR)</th>
+                </tr>
+                <tr>
+                    <td>Rohit Kumar</td>
+                    <td><img src="tcs.png" alt="TCS" class="company-logo"></td>
+                    <td>Software Engineer</td>
+                    <td>6,00,000</td>
+                </tr>
+                <tr>
+                    <td>Priya Sharma</td>
+                    <td><img src="infosys.png" alt="Infosys" class="company-logo"></td>
+                    <td>Data Analyst</td>
+                    <td>5,50,000</td>
+                </tr>
+                <tr>
+                    <td>Ankit Verma</td>
+                    <td><img src="wipro.png" alt="Wipro" class="company-logo"></td>
+                    <td>Full Stack Developer</td>
+                    <td>7,00,000</td>
+                </tr>
+            </table>
+
+            <div class="placement-info">
+                <p>Our students have been placed in top companies like TCS, Infosys, Wipro, and many more. We have a dedicated placement cell that ensures our students are prepared for the industry through mock interviews, resume building workshops, and regular interactions with industry experts.</p>
+                <p>For more information about our placement process, you can contact us at <strong>placement@yourwebsite.com</strong>.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

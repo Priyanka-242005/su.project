@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Structures in Python - LTLT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .notes-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .note-card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .note-card h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .note-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <div class="dropdown">
+            <a href="courses.html">COURSES</a>
+            <div class="dropdown-content">
+                <a href="python.html">Python</a>
+                <a href="java.html">Java</a>
+                <a href="c.html">C</a>
+            </div>
+        </div>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+        <div class="dropdown">
+            <a href="resources.html">RESOURCES</a>
+            <div class="dropdown-content">
+                <a href="lakysha training learn technology.html">Lakysha Training Learn Technology</a>
+                <a href="c,adv c,icp,java,dsa,python.html">C,ADV C,ICP,JAVA,DSA,PYTHON BY JITU SIR</a>
+                <a href="java concept by jitu sir.html">Java Concept By JITU SIR</a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <h2>Control Structures in Python</h2>
+        <div class="notes-content">
+            <div class="note-card">
+                <h3>1. Conditional Statements</h3>
+                <p>Conditional statements allow you to execute certain code based on conditions. The main statements are <code>if</code>, <code>elif</code>, and <code>else</code>.</p>
+                <pre>
+if condition:
+    # Code to execute if condition is true
+elif another_condition:
+    # Code to execute if another_condition is true
+else:
+    # Code to execute if neither condition is true
+                </pre>
+            </div>
+            <div class="note-card">
+                <h3>2. Example of Conditional Statements</h3>
+                <p>Here is a simple example of using conditional statements:</p>
+                <pre>
+age = 18
+
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
+                </pre>
+            </div>
+            <div class="note-card">
+                <h3>3. Loops</h3>
+                <p>Python has two types of loops: <code>for</code> and <code>while</code>.</p>
+            </div>
+            <div class="note-card">
+                <h3>4. For Loop</h3>
+                <p>The <code>for</code> loop is used to iterate over a sequence (like a list or a string).</p>
+                <pre>
+for i in range(5):
+    print(i)
+                </pre>
+            </div>
+            <div class="note-card">
+                <h3>5. While Loop</h3>
+                <p>The <code>while</code> loop runs as long as a specified condition is true.</p>
+                <pre>
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+                </pre>
+            </div>
+            <div class="note-card">
+                <h3>6. Break and Continue</h3>
+                <p>You can control the flow of loops using <code>break</code> to exit the loop and <code>continue</code> to skip the current iteration.</p>
+                <pre>
+for i in range(10):
+    if i == 5:
+        break  # Exit the loop
+    print(i)
+
+for i in range(10):
+    if i % 2 == 0:
+        continue  # Skip even numbers
+    print(i)
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

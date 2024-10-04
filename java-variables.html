@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Data Types - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h3 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .content ul {
+            padding-left: 20px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Variables and Data Types</h2>
+        <div class="content">
+            <h3>What are Variables?</h3>
+            <p>Variables in Java are containers that store data values. Every variable must be declared with a data type, which determines the size and layout of the variable's memory. A variable’s data type also defines the range of values that can be stored inside it and the operations that can be performed on that data.</p>
+
+            <h3>Types of Variables</h3>
+            <ul>
+                <li><b>Local Variables:</b> Declared inside a method and accessible only within that method.</li>
+                <li><b>Instance Variables:</b> Declared inside a class but outside any method. They belong to an object and are accessed through the object reference.</li>
+                <li><b>Static Variables:</b> Declared with the `static` keyword inside a class but outside any method. They belong to the class and are shared by all instances of the class.</li>
+            </ul>
+
+            <h3>Primitive Data Types</h3>
+            <p>Java has 8 primitive data types which are predefined by the language and named by a keyword. These types serve as the building blocks of data manipulation in Java.</p>
+            <ul>
+                <li><b>byte:</b> 8-bit signed integer. Range: -128 to 127.</li>
+                <li><b>short:</b> 16-bit signed integer. Range: -32,768 to 32,767.</li>
+                <li><b>int:</b> 32-bit signed integer. Range: -2<sup>31</sup> to 2<sup>31</sup>-1.</li>
+                <li><b>long:</b> 64-bit signed integer. Range: -2<sup>63</sup> to 2<sup>63</sup>-1.</li>
+                <li><b>float:</b> 32-bit floating-point number.</li>
+                <li><b>double:</b> 64-bit floating-point number (used for precision).</li>
+                <li><b>char:</b> 16-bit Unicode character. Range: '\u0000' (0) to '\uffff' (65,535).</li>
+                <li><b>boolean:</b> Represents one bit of information. Only two possible values: `true` and `false`.</li>
+            </ul>
+
+            <h3>Reference Data Types</h3>
+            <p>In Java, reference types refer to objects. These variables are used to access objects, and they store the memory address of an object. Common reference data types include:</p>
+            <ul>
+                <li><b>Arrays:</b> Containers that hold multiple values of the same data type.</li>
+                <li><b>Classes:</b> Templates for creating objects. When an object is created, it is referenced by its class type.</li>
+                <li><b>Interfaces:</b> Similar to classes but they contain abstract methods that must be implemented by a class.</li>
+            </ul>
+
+            <h3>Variable Declaration and Initialization</h3>
+            <p>Variables in Java must be declared before they are used. Here's the syntax for declaring a variable:</p>
+            <pre><code>data_type variable_name = value;</code></pre>
+            <p>Example:</p>
+            <pre><code>int age = 25;</code></pre>
+            <p>Here, `int` is the data type, `age` is the variable name, and `25` is the value assigned to the variable.</p>
+
+            <h3>Type Casting</h3>
+            <p>Type casting is converting one data type to another. Java provides two types of casting:</p>
+            <ul>
+                <li><b>Widening (Automatic):</b> Converting a smaller type to a larger type. Example: `int` to `long`.</li>
+                <li><b>Narrowing (Explicit):</b> Converting a larger type to a smaller type. Example: `double` to `float`. This requires explicit casting.</li>
+            </ul>
+            <p>Example of explicit casting:</p>
+            <pre><code>double d = 9.78;
+int i = (int) d;  // Narrowing casting</code></pre>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

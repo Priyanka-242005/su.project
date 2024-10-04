@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Class Notes - LTLT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .note-card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .note-card h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .note-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .note-card a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .note-card a:hover {
+            background-color: #3e8e41;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .example {
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <div class="dropdown">
+            <a href="courses.html">COURSES</a>
+            <div class="dropdown-content">
+                <a href="python.html">Python</a>
+                <a href="java.html">Java</a>
+                <a href="c.html">C</a>
+            </div>
+        </div>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+        <div class="dropdown">
+            <a href="resources.html">RESOURCES</a>
+            <div class="dropdown-content">
+                <a href="lakysha training learn technology.html">Lakysha Training Learn Technology</a>
+                <a href="c,adv c,icp,java,dsa,python.html">C,ADV C,ICP,JAVA,DSA,PYTHON BY JITU SIR</a>
+                <a href="java concept by jitu sir.html">Java Concept By JITU SIR</a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <h2>C Class Notes</h2>
+        <div class="content">
+            <div class="note-card">
+                <h3>Introduction to C</h3>
+                <p>C is a high-level programming language that provides low-level access to memory and is widely used for system programming.</p>
+                
+                <h3>Basic Concepts</h3>
+                <ul>
+                    <li><strong>Data Types:</strong> Understand different data types such as int, char, float, and double.</li>
+                    <li><strong>Control Structures:</strong> Learn about if-else statements, loops (for, while, do-while).</li>
+                    <li><strong>Functions:</strong> Definition, declaration, and calling functions in C.</li>
+                </ul>
+
+                <h3>Input and Output</h3>
+                <p>Learn how to use <code>scanf()</code> for input and <code>printf()</code> for output.</p>
+
+                <div class="example">
+                    <strong>Example:</strong><br>
+                    <code>#include &lt;stdio.h&gt;<br>
+                    int main() {<br>
+                        printf("Hello, World!");<br>
+                        return 0;<br>
+                    }</code>
+                </div>
+
+                <h3>Arrays and Strings</h3>
+                <p>Understanding arrays and strings, and how to manipulate them in C.</p>
+
+                <h3>Pointers</h3>
+                <p>Pointers are variables that store memory addresses. Learn how to use pointers effectively.</p>
+
+                <h3>Structures</h3>
+                <p>Structures allow you to group different data types together. Learn how to define and use structures.</p>
+
+                <h3>File Handling</h3>
+                <p>Learn how to read from and write to files using C.</p>
+
+                <h3>Sample Programs</h3>
+                <p>Explore various sample programs to strengthen your understanding:</p>
+                <ul>
+                    <li><a href="c-program1.html">Program to Find Factorial of a Number</a></li>
+                    <li><a href="c-program2.html">Program to Reverse a String</a></li>
+                    <li><a href="c-program3.html">Program to Sort an Array</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

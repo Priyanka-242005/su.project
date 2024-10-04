@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Class Notes - LTLT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .notes-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .note-card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 60%;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .note-card h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .note-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .note-card a {
+            background-color:black;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .note-card a:hover {
+            background-color:black;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .note-list ul {
+            padding-left: 20px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .note-list ul li {
+            margin-bottom: 10px;
+        }
+
+        .note-list ul li a {
+            color:white;
+            text-decoration: none;
+        }
+
+        .note-list ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Java Class Notes</h2>
+        <div class="notes-section">
+            <div class="note-card">
+                <h3>Core Java Concepts</h3>
+                <p>Understand the foundational concepts of Java programming language.</p>
+                <div class="note-list">
+                    <ul>
+                        <li><a href="java-introduction.html">Introduction to Java</a></li>
+                        <li><a href="java-variables.html">Variables and Data Types</a></li>
+                        <li><a href="java-oops.html">Object-Oriented Programming (OOP)</a></li>
+                        <li><a href="java-collections.html">Collections Framework</a></li>
+                        <li><a href="java-exceptions.html">Exception Handling</a></li>
+                        <li><a href="java-threads.html">Multithreading</a></li>
+                        <li><a href="java-streams.html">Streams and Lambda Expressions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="note-card">
+                <h3>Advanced Java Topics</h3>
+                <p>Explore advanced topics for deeper knowledge of Java.</p>
+                <div class="note-list">
+                    <ul>
+                        <li><a href="java-servlets.html">Servlets and JSP</a></li>
+                        <li><a href="java-spring.html">Spring Framework</a></li>
+                        <li><a href="java-hibernate.html">Hibernate ORM</a></li>
+                        <li><a href="java-microservices.html">Microservices with Spring Boot</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

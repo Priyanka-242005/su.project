@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streams and Lambda Expressions - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .note-card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .note-card h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .note-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .example {
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Streams and Lambda Expressions</h2>
+        <div class="content">
+            <div class="note-card">
+                <h3>Understanding Streams</h3>
+                <p>Streams are sequences of data elements supporting sequential and parallel aggregate operations. They can be created from various data sources, such as collections, arrays, or I/O channels.</p>
+                <p>Streams do not store data; they simply convey data from a source through a pipeline of computational operations.</p>
+
+                <h3>Creating Streams</h3>
+                <div class="example">
+                    <strong>Example:</strong><br>
+                    <code>List&lt;String&gt; names = Arrays.asList("Alice", "Bob", "Charlie");<br>
+                    Stream&lt;String&gt; stream = names.stream();</code>
+                </div>
+
+                <h3>Stream Operations</h3>
+                <p>Stream operations are divided into intermediate and terminal operations:</p>
+                <ul>
+                    <li><strong>Intermediate operations:</strong> return a new stream and can be chained (e.g., filter, map, sorted).</li>
+                    <li><strong>Terminal operations:</strong> produce a result or side-effect (e.g., forEach, collect, reduce).</li>
+                </ul>
+
+                <h3>Understanding Lambda Expressions</h3>
+                <p>Lambda expressions are a way to implement functional interfaces (interfaces with a single abstract method) in a concise way. They provide a clear and expressive syntax for representing one method interfaces using an expression.</p>
+
+                <div class="example">
+                    <strong>Example:</strong><br>
+                    <code>Runnable runnable = () -> System.out.println("Hello, World!");</code>
+                </div>
+
+                <h3>Using Lambda Expressions with Streams</h3>
+                <p>Lambda expressions are commonly used with streams to define the behavior of operations like filtering and mapping:</p>
+                <div class="example">
+                    <strong>Example:</strong><br>
+                    <code>List&lt;String&gt; filteredNames = names.stream()<br>
+                    .filter(name -> name.startsWith("A"))<br>
+                    .collect(Collectors.toList());</code>
+                </div>
+
+                <h3>Benefits of Streams and Lambda Expressions</h3>
+                <ul>
+                    <li>Conciseness and clarity in code.</li>
+                    <li>Ability to express complex data processing queries.</li>
+                    <li>Support for parallel processing.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

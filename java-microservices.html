@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microservices with Spring Boot - Java Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #333;
+            padding: 10px 0;
+            flex-wrap: wrap;
+            position: relative;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .note-card {
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .note-card h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .note-card p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .example {
+            background-color: #e9ecef;
+            border-left: 5px solid #007bff;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="aboutus.html">ABOUT US</a>
+        <a href="courses.html">COURSES</a>
+        <a href="classnotes.html">CLASS NOTES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="testimonials.html">TESTIMONIALS</a>
+        <a href="contactus.html">CONTACT US</a>
+        <a href="placement.html">PLACEMENT</a>
+    </nav>
+
+    <section>
+        <h2>Microservices with Spring Boot</h2>
+        <div class="content">
+            <div class="note-card">
+                <h3>Introduction to Microservices</h3>
+                <p>Microservices architecture is an approach to software development where a large application is composed of small, independent services that communicate over APIs.</p>
+
+                <h3>Key Principles of Microservices</h3>
+                <ul>
+                    <li><strong>Decentralized Data Management:</strong> Each service manages its own database and data model.</li>
+                    <li><strong>Independent Deployability:</strong> Services can be deployed independently without affecting other services.</li>
+                    <li><strong>API-Based Communication:</strong> Services communicate over lightweight protocols such as HTTP/REST or messaging queues.</li>
+                    <li><strong>Scalability:</strong> Services can be scaled independently based on demand.</li>
+                </ul>
+
+                <h3>Spring Boot Overview</h3>
+                <p>Spring Boot is an extension of the Spring framework that simplifies the setup and development of new applications.</p>
+
+                <h3>Building a Microservice with Spring Boot</h3>
+                <div class="example">
+                    <strong>Example:</strong><br>
+                    <code>public static void main(String[] args) {<br>
+                    SpringApplication.run(MyMicroservice.class, args);<br>
+                    }<br><br>
+                    @RestController<br>
+                    public class MyController {<br>
+                    @GetMapping("/api/greeting")<br>
+                    public String greeting() {<br>
+                    return "Hello, World!";<br>
+                    }<br>
+                    }</code>
+                </div>
+
+                <h3>Building a RESTful API</h3>
+                <p>To create a RESTful API with Spring Boot:</p>
+                <ul>
+                    <li>Define a model class representing your data.</li>
+                    <li>Create a repository interface for data access.</li>
+                    <li>Implement a controller to handle HTTP requests.</li>
+                </ul>
+
+                <h3>Spring Boot Features</h3>
+                <ul>
+                    <li><strong>Auto Configuration:</strong> Automatically configures Spring applications based on the dependencies on the classpath.</li>
+                    <li><strong>Standalone:</strong> Spring Boot applications are stand-alone and web servers can be embedded.</li>
+                    <li><strong>Actuator:</strong> Provides production-ready features like monitoring and management of your application.</li>
+                </ul>
+
+                <h3>Benefits of Microservices with Spring Boot</h3>
+                <ul>
+                    <li>Faster development and deployment cycles.</li>
+                    <li>Improved fault isolation.</li>
+                    <li>Technological diversity, allowing teams to choose the best tools for their services.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 LTLT. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
